@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navbarData } from "./navbarData";
 import './navbar.css';
-import { IconContext } from "react-icons";
-import { Image } from "react-bootstrap";
-import { Avatar } from "@mui/material";
 import redHeadImage from "../assets/pelirroja.jpg";
 import UserAvatar from "./UserAvatar";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { Form } from "react-bootstrap";
 
 const Navbar = () => {
   const [sideBarActive, setActive] = useState(false);
@@ -15,7 +14,20 @@ const Navbar = () => {
   const showSidebar = () => setActive(!sideBarActive);
   return (
     <>
-        <div className="navbar">
+        <div className={sideBarActive ? 'navbar-top' : 'navbar-top inactive'}>
+          {/* This logic could be done in a new component, 
+            passed to Navigation to see if searchbar needs 
+            to change according to each screen (using correct styling too) */}
+          <div>
+            <Form>
+              <Form.Group className="mb-3" controlId="formQuery">
+                <Form.Control type="text" placeholder="🔎 Search for a Contact" />
+              </Form.Group>
+            </Form>
+          </div>
+          <div className="navbar-top-icon">
+            <IoMdNotificationsOutline />
+          </div>
         </div>
         <nav className={sideBarActive ? 'nav-menu' : 'nav-menu inactive'}>
           <ul className='nav-menu-items'>
@@ -26,7 +38,7 @@ const Navbar = () => {
             </li>
             <UserAvatar 
               user={{image: redHeadImage, name: 'Sierra Ferguson', email: 's.ferguson@gmail.com'}}
-              usedIn="navigator"
+              usedFor={sideBarActive ? "navigator" : "imageOnly"}
             />
             {navbarData.map((item, index) => {
                 return (

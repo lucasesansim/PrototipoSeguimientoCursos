@@ -1,9 +1,19 @@
-.navbar {
+.navbar-top {
   background-color: rgb(249, 249, 253);
   height: 60px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 275px;
+}
+
+.navbar-top.inactive {
+  padding-left: 100px;
+}
+
+.navbar-top-icon {
+  padding-right: 32px;
+  font-size: 20px;
 }
 
 .nav-header {

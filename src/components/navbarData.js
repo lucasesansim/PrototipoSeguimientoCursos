@@ -3,7 +3,7 @@ import { FaRegUser } from "react-icons/fa"; // Email, Contacts
 import { TbLayoutDashboard } from "react-icons/tb"; // Dashboard
 import { TiEqualsOutline } from "react-icons/ti"; //Tasks
 import { BsChatLeft, BsEnvelope } from "react-icons/bs"; // Chat
-import { HiOutlineViewBoards, HiOutlineDotsHorizontal } from "react-icons/hi"; // Deals, settings
+import { HiOutlineViewBoards } from "react-icons/hi"; // Deals, settings
 
 
 export const navbarData = [
