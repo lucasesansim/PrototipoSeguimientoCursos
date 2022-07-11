@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaRegUser } from "react-icons/fa"; // Email, Contacts
 import { TbLayoutDashboard } from "react-icons/tb"; // Dashboard
 import { TiEqualsOutline } from "react-icons/ti"; //Tasks
@@ -11,36 +11,36 @@ export const navbarData = [
     title: 'Dashboard',
     path: '/',
     icon: <TbLayoutDashboard  />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
   {
     title: 'Tasks',
     path: '/', // Dummy for prototype reasons
     icon: <TiEqualsOutline />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
   {
     title: 'Email',
     path: '/', // Dummy for prototype reasons
     icon: <BsEnvelope />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
   {
     title: 'Contacts',
     path: '/contacts',
     icon: <FaRegUser />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
   {
     title: 'Chat',
     path: '/', // Dummy for prototype reasons
     icon: <BsChatLeft />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
   {
     title: 'Deals',
     path: '/', // Dummy for prototype reasons
     icon: <HiOutlineViewBoards />,
-    cName: 'nav-text'
+    className: 'nav-text'
   },
 ]

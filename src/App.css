@@ -7,8 +7,9 @@
   font-family: 'Lato', sans-serif;
 }
 
-.home,
+.dashboard,
 .contacts {
+  background-color: #f0f3f5;
   display: flex;
   height: 90vh;
   align-items: center;
