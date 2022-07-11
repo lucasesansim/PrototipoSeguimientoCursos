@@ -1,0 +1,15 @@
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  margin: 28px 14px 28px 14px;
+}
+
+.avatar-email {
+  margin-top: 4px;
+  font-size: 12px;
+  color: gray;
+}
