@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #060b26;
+  background-color: rgb(249, 249, 253);
   height: 60px;
   display: flex;
   justify-content: start;
@@ -7,12 +7,14 @@
 }
 
 .nav-header-text {
-  font-size: 1.5rem;
+  text-decoration: none;
+  color: #20a8d8;
+  font-size: 20px;
   background: none;
 }
 
 .nav-menu {
-  background-color: #060b26;
+  background-color: #ffffff;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -32,37 +34,43 @@
   justify-content: start;
   align-items: center;
   list-style: none;
-  height: 60px;
+  height: 40px;
 }
 
 .nav-text a {
   text-decoration: none;
-  color: #f5f5f5;
-  font-size: 18px;
+  color: #2c2a2a;
+  font-size: 16px;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
   border-radius: 4px;
-  margin: 0 0 0 28px;
+  margin: 0 28px 0 28px;
 }
 
 .nav-text.inactive a {
+  font-size: 16px;
   justify-content: center;
   margin: 0;
 }
 
 .nav-text a:hover {
-  background-color: #1a83ff;
+  color: #20a8d8;;
+}
+
+.nav-text-selected {
+  color: #20a8d8;;
 }
 
 .nav-menu-items {
   width: 100%;
+  box-shadow: 2px 2px 2px 8px rgb(0 0 0 / 3%);  
 }
 
 .nav-header {
-  background-color: #060b26;
+  background-color: #ffffff;
   height: 60px;
   display: flex;
   justify-content: start;

@@ -6,11 +6,13 @@ import { IconContext } from "react-icons";
 
 const Navbar = () => {
   const [sideBarActive, setActive] = useState(false);
+  const [activeTab, setActiveTab] = useState('Dashboard');
 
+  console.log(activeTab)
   const showSidebar = () => setActive(!sideBarActive);
   return (
     <>
-      <IconContext.Provider value={{ color: 'gray', size: '20px'}}>
+      {/* <IconContext.Provider value={{ color: 'gray', size: '20px'}}> */}
         <div className="navbar">
           <Link to='#' className="menu-bars">
           </Link>
@@ -25,10 +27,16 @@ const Navbar = () => {
             {navbarData.map((item, index) => {
                 return (
                   <li key={index} className={sideBarActive ? `${item.className}` : `${item.className} inactive`}>
-                    <Link to={item.path}>
-                      {item.icon}
+                    <Link 
+                      to={item.path} 
+                      onClick={() => setActiveTab(item.title)} 
+                      className={activeTab === item.title ? 'nav-text-selected' : ''}
+                    >
+                      <div style={{color: `${activeTab === item.title ? '#20a8d8': 'gray'}`, fontSize: '20px'}}>
+                        {item.icon}
+                      </div>
                       {sideBarActive && (
-                        <span>{item.title}</span>
+                        <span style={{color: `${activeTab === item.title ? '#20a8d8': 'gray'}`}}>{item.title}</span>
                       )}
                     </Link>
                   </li>
@@ -36,7 +44,7 @@ const Navbar = () => {
               })}
           </ul>
         </nav>
-      </IconContext.Provider>
+      {/* </IconContext.Provider> */}
     </>
   )
 }
