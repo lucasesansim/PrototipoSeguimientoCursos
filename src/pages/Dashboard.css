@@ -1,0 +1,30 @@
+.dashboard {
+  padding: 10px 30px 10px 275px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Would do other media queries to reduce the number of rows and set to each accordingly.
+  Similar effect could also be achieved with display flex,
+  if screen layout would have been set adequatly, and distances to margins. */
+@media (min-width: 775px) {
+  .event-calendar-card {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 95%
+  }
+
+  .deals-graph-card {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    height: 90%
+  }
+
+  .tasks-chart-card {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    height: 90%
+  }
+}
