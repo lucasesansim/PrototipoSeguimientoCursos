@@ -9,15 +9,15 @@ const Dashboard = () => {
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
-              Some quick example
+              Event Card
             </Card.Text>
           </Card.Body>
         </Card>
         <Card className='deals-graph-card'>
-          Ho!!
+          Deals Graph
         </Card>
         <Card className='tasks-chart-card'>
-          JIJI!!
+          Tasks Pie Chart
         </Card>
     </div>
   );
