@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
         <nav className={sideBarActive ? 'nav-menu' : 'nav-menu inactive'}>
           <ul className='nav-menu-items'>
-            <li className='navbar-toggle'>
+            <li className={sideBarActive ? 'nav-header' : 'nav-header inactive'}>
               <Link to='#' className='nav-header-text' onClick={showSidebar}>
                 {sideBarActive ? 'Saas Kit' : 'Saas'}
               </Link>
